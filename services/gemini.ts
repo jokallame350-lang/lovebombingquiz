@@ -10,9 +10,9 @@ export const createGeminiClient = () => {
 export const generateBonusQuestion = async (): Promise<string> => {
   try {
     const ai = createGeminiClient();
-    // Model ismini güncel SDK standardına göre teyit edin, genellikle 'gemini-1.5-flash' kullanılır
-    // Ancak 2.5-flash şu an deneysel/yeni ise kalabilir. Hata alırsanız 'gemini-1.5-flash' yapın.
-    const modelId = 'gemini-2.0-flash-exp'; // Güncel model ID'si (veya gemini-1.5-flash)
+    
+    // Model ismini güncel SDK standardına göre teyit edin.
+    const modelId = 'gemini-1.5-flash'; 
     
     const model = ai.getGenerativeModel({ model: modelId });
     
